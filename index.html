@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carbon Chromium Privacy Browser</title>
+    <title>Monochrome Chromium UI Concept</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -14,6 +15,7 @@
         <button class="side-btn" title="History">🕘</button>
         <button class="side-btn" title="Bookmarks">★</button>
         <button class="side-btn" title="Proxy">🛡</button>
+        <button class="side-btn" title="Downloads">⬇</button>
         <div class="spacer"></div>
         <button class="side-btn" title="Settings">⚙</button>
       </aside>
@@ -27,6 +29,11 @@
             <button class="tab active">Secure Tab</button>
           </div>
           <p class="privacy-chip">Chromium Engine + Hardened Defaults</p>
+          <div class="tab-strip" id="tabStrip">
+            <button class="tab active">New Tab</button>
+            <button class="tab">Design Gallery</button>
+            <button class="tab">Docs</button>
+          </div>
         </header>
 
         <section class="toolbar">
@@ -65,6 +72,35 @@
             <strong>Privacy note:</strong> this app applies strict Chromium defaults and supports explicit proxy routing,
             but no browser alone can guarantee “extreme privacy.” Use trusted proxies/VPN/Tor and good OPSEC.
           </div>
+            <button>←</button>
+            <button>→</button>
+            <button>⟳</button>
+          </div>
+          <label class="omnibox">
+            <span>🔎</span>
+            <input id="urlInput" type="text" value="https://www.chromium.org" />
+            <kbd>Ctrl+L</kbd>
+          </label>
+          <button class="action-btn">⤴</button>
+          <button class="action-btn">☰</button>
+        </section>
+
+        <section class="content-frame">
+          <div class="hero-card">
+            <p class="eyebrow">Custom Chromium Concept</p>
+            <h1>Carbon UI</h1>
+            <p>
+              A futuristic monochrome browser shell with stacked tabs,
+              floating controls, and a minimal command-space aesthetic.
+            </p>
+            <div class="chips">
+              <span>Grey</span>
+              <span>White</span>
+              <span>Black</span>
+            </div>
+          </div>
+
+          <div class="quick-grid" id="quickGrid"></div>
         </section>
       </main>
     </div>

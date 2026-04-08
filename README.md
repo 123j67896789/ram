@@ -29,3 +29,10 @@ CARBON_PROXY_RULE="socks5://127.0.0.1:9050" npm run start
 
 This project improves privacy posture but does **not** guarantee anonymity or “extreme privacy” by itself.
 Traffic privacy still depends on your proxy/VPN/Tor trust model, endpoint hygiene, and operational security.
+# Carbon UI Chromium Concept
+
+A custom, cool monochrome browser concept inspired by Chromium with a grey/white/black visual style.
+
+## Run locally
+
+Open `index.html` in any browser.
