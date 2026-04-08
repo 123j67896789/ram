@@ -1,0 +1,14 @@
+{
+  "name": "carbon-chromium-private-browser",
+  "version": "1.0.0",
+  "description": "Custom Chromium-based desktop browser prototype with built-in proxy controls and privacy hardening.",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node --check script.js"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  }
+}

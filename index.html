@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Chromium Privacy Browser</title>
     <title>Monochrome Chromium UI Concept</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -13,6 +14,7 @@
         <button class="side-btn active" title="New tab">＋</button>
         <button class="side-btn" title="History">🕘</button>
         <button class="side-btn" title="Bookmarks">★</button>
+        <button class="side-btn" title="Proxy">🛡</button>
         <button class="side-btn" title="Downloads">⬇</button>
         <div class="spacer"></div>
         <button class="side-btn" title="Settings">⚙</button>
@@ -23,6 +25,10 @@
           <div class="window-controls">
             <span></span><span></span><span></span>
           </div>
+          <div class="tab-strip">
+            <button class="tab active">Secure Tab</button>
+          </div>
+          <p class="privacy-chip">Chromium Engine + Hardened Defaults</p>
           <div class="tab-strip" id="tabStrip">
             <button class="tab active">New Tab</button>
             <button class="tab">Design Gallery</button>
@@ -32,6 +38,40 @@
 
         <section class="toolbar">
           <div class="nav-buttons">
+            <button id="backBtn">←</button>
+            <button id="forwardBtn">→</button>
+            <button id="refreshBtn">⟳</button>
+          </div>
+
+          <label class="omnibox">
+            <span>🔎</span>
+            <input id="urlInput" type="text" value="https://example.com" />
+            <kbd>Ctrl+L</kbd>
+          </label>
+
+          <button class="action-btn" id="goBtn">Go</button>
+        </section>
+
+        <section class="proxy-row">
+          <label class="proxy-input-wrap">
+            Proxy Rule
+            <input
+              id="proxyInput"
+              type="text"
+              value="direct://"
+              placeholder="http=127.0.0.1:8080;https=127.0.0.1:8080"
+            />
+          </label>
+          <button id="applyProxyBtn" class="proxy-btn">Apply Proxy</button>
+          <p id="proxyStatus" class="proxy-status">Proxy: direct://</p>
+        </section>
+
+        <section class="content-frame">
+          <iframe id="webFrame" title="Carbon Browser Frame" src="https://example.com"></iframe>
+          <div class="privacy-note">
+            <strong>Privacy note:</strong> this app applies strict Chromium defaults and supports explicit proxy routing,
+            but no browser alone can guarantee “extreme privacy.” Use trusted proxies/VPN/Tor and good OPSEC.
+          </div>
             <button>←</button>
             <button>→</button>
             <button>⟳</button>
